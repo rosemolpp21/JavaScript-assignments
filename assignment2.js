@@ -9,31 +9,31 @@ for (let i = 1; i <= 5; i++) {
 }
 // ['car', 1, 5, 'js', 'node js', 'mysql', 'sql' ] : Use switch statement inside a map function and 
 // console each item by using switch statement.
-let k=['car', 1, 5, 'js', 'node js', 'mysql', 'sql' ] ;
-for(let i=0;i<k.length;i++){
-    switch (k[i]){
+let k = ['car', 1, 5, 'js', 'node js', 'mysql', 'sql'];
+k.map(item => {
+    switch(item) {
         case 'car':
-            console.log(k[i]);
+            console.log('car');
             break;
         case 1:
-            console.log(k[i]);
+            console.log(1);
             break;
         case 5:
-            console.log(k[i]);
+            console.log(5);
             break;
         case 'js':
-            console.log(k[i]);
+            console.log('js');
             break;
         case 'node js':
-            console.log(k[i]);
+            console.log('node js');
             break;
         case 'mysql':
-            console.log(k[i]);
+            console.log('mysql');
             break;
         default:
             console.log('sql');
     }
-}
+});
 // [1, 2, 3, 4. 5, 6] : Write a closure function to delete indexes 5 and 2 of this array.
 let arr = [1, 2, 3, 4, 5, 6];
 function a(arr) {
