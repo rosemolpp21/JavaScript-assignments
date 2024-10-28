@@ -13,25 +13,25 @@ let k = ['car', 1, 5, 'js', 'node js', 'mysql', 'sql'];
 k.map(item => {
     switch(item) {
         case 'car':
-            console.log('car');
+            console.log(item);
             break;
         case 1:
-            console.log(1);
+            console.log(item);
             break;
         case 5:
-            console.log(5);
+            console.log(item);
             break;
         case 'js':
-            console.log('js');
+            console.log(item);
             break;
         case 'node js':
-            console.log('node js');
+            console.log(item);
             break;
         case 'mysql':
-            console.log('mysql');
+            console.log(item);
             break;
         default:
-            console.log('sql');
+            console.log(item);
     }
 });
 // [1, 2, 3, 4. 5, 6] : Write a closure function to delete indexes 5 and 2 of this array.
