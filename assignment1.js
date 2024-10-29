@@ -16,7 +16,7 @@ console.log("variable7 is", typeof variable7, "type");
 let variable8
 console.log("variable8 is", typeof variable8, "type");
 
-//Write a JS program to show an alert message on the loading of the website.
+//Write a JS program to show an alert message on the loading of the websitee.
 alert("hello welcome to my page");
 
 //["1", "2", "3", "4", "5", "6", "7"]
@@ -60,7 +60,7 @@ console.log(arr5);
 let arr6 = ["1", "2", "3", "4", "5", "6", "7"];
 arr6.forEach((value)=>{
     if(value=="3"||value=="6"||value=="7"){
-        console.log("value",value,"is present inside this array");
+        console.log("value",value,"is present inside the array");
     }
 })
 
@@ -85,7 +85,6 @@ arr8.forEach((value, index) => {
         console.log(value, "*", index, "not equal to 40");
     }
 });
-
 
 //Create two arrays with five items each and merge the array into a single array and then console it.
 let arr9 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
