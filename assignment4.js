@@ -123,10 +123,10 @@ document.getElementById("prepopulate").onclick=function(event){
 // Create a form with a text field which when submitted, will change the tab title to whatever is entered, 
 // limit the field to 50 characters, otherwise show error message, stay on the same page when submitted(it shouldn't refresh).
 document.getElementById("tab-title-changing-form").onsubmit = function (event) {
-    event.preventDefault();
     let newtitle=document.getElementById("tab-title").value;
     if(newtitle.length<50){
         document.title=newtitle;
+        event.preventDefault();
     }
     else{
        event.preventDefault();
