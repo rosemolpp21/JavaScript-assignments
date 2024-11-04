@@ -64,6 +64,7 @@ programs.forEach((value, index) => {
 // if any of the field is empty on submitting it should show corresponding error messages on below of all the required fields.
 // pin code and mobile number fields should not be submitted with non-integer values, if so, then show an error msg stating only numbers are allowed.
 // Minimum length of phone number should be 10, otherwise show corresponding error msg below the mobile no. field. 
+// Make a prepopulate button, which when clicked will populate the form with values in the local storage if it exists, otherwise the button will be disabled.
 document.getElementById("form-details").onsubmit = function (event) {
     let formname = document.getElementById("name").value;
     let phonenumber = document.getElementById("phoneno").value;
@@ -121,8 +122,8 @@ document.getElementById("prepopulate").onclick=function(event){
 
 // Create a form with a text field which when submitted, will change the tab title to whatever is entered, 
 // limit the field to 50 characters, otherwise show error message, stay on the same page when submitted(it shouldn't refresh).
-
 document.getElementById("tab-title-changing-form").onsubmit = function (event) {
+    event.preventDefault();
     let newtitle=document.getElementById("tab-title").value;
     if(newtitle.length<50){
         document.title=newtitle;
