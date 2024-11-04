@@ -125,11 +125,11 @@ document.getElementById("prepopulate").onclick=function(event){
 document.getElementById("tab-title-changing-form").onsubmit = function (event) {
     let newtitle=document.getElementById("tab-title").value;
     if(newtitle.length<50){
-        document.getElementsByTagName.innerHTML=newtitle;
+        document.title=newtitle;
     }
     else{
        event.preventDefault();
-       document.getElementById("title-error").innerHTML="the number of characters should be less than 50"
+       document.getElementById("title-error").innerHTML="the number of characters should be less than 50";
     }
 }
 
