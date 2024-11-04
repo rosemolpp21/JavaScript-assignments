@@ -85,6 +85,7 @@ document.getElementById("form-details").onsubmit = function (event) {
             arrayofnumberelements.forEach((numberelement, index) => {
                 if (isNaN(numberelement)) {
                     event.preventDefault();
+                    let errormsgarray = ["phoneno-error", "pincode-error"];
                     document.getElementById(errormsgarray[index]).innerHTML = "error : only numbers are allowed";
                 }
                 else if (index == 0 && numberelement.length < 10) {
@@ -97,12 +98,12 @@ document.getElementById("form-details").onsubmit = function (event) {
                     event.preventDefault();
                     document.getElementById(errormsgarray[index]).innerHTML = "Minimum length of Pin code should be 6";
                 }
-                else{
-                    localStorage.setItem("fullname",formname);
-                    localStorage.setItem("phone number",phonenumber);
-                    localStorage.setItem("place name",placename);
-                    localStorage.setItem("company name",nameofcompany);
-                    localStorage.setItem("pin code",pinnumber);   
+                else {
+                    localStorage.setItem("fullname", formname);
+                    localStorage.setItem("phone number", phonenumber);
+                    localStorage.setItem("place name", placename);
+                    localStorage.setItem("company name", nameofcompany);
+                    localStorage.setItem("pin code", pinnumber);
                 }
 
             })
@@ -110,27 +111,27 @@ document.getElementById("form-details").onsubmit = function (event) {
         }
     })
 };
-document.getElementById("prepopulate").onclick=function(event){
+document.getElementById("prepopulate").onclick = function (event) {
     event.preventDefault();
-    document.getElementById("name").value=localStorage.getItem("fullname");
-    document.getElementById("phoneno").value=localStorage.getItem("phone number");
-    document.getElementById("place").value=localStorage.getItem("place name");
-    document.getElementById("companyname").value=localStorage.getItem("company name");
-    document.getElementById("pincode").value=localStorage.getItem("pin code");
+    document.getElementById("name").value = localStorage.getItem("fullname");
+    document.getElementById("phoneno").value = localStorage.getItem("phone number");
+    document.getElementById("place").value = localStorage.getItem("place name");
+    document.getElementById("companyname").value = localStorage.getItem("company name");
+    document.getElementById("pincode").value = localStorage.getItem("pin code");
 
 }
 
 // Create a form with a text field which when submitted, will change the tab title to whatever is entered, 
 // limit the field to 50 characters, otherwise show error message, stay on the same page when submitted(it shouldn't refresh).
 document.getElementById("tab-title-changing-form").onsubmit = function (event) {
-    let newtitle=document.getElementById("tab-title").value;
-    if(newtitle.length<50){
-        document.title=newtitle;
+    let newtitle = document.getElementById("tab-title").value;
+    if (newtitle.length < 50) {
+        document.title = newtitle;
         event.preventDefault();
     }
-    else{
-       event.preventDefault();
-       document.getElementById("title-error").innerHTML="the number of characters should be less than 50";
+    else {
+        event.preventDefault();
+        document.getElementById("title-error").innerHTML = "the number of characters should be less than 50";
     }
 }
 
