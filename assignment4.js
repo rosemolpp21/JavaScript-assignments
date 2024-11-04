@@ -109,9 +109,14 @@ document.getElementById("form-details").onsubmit = function (event) {
         }
     })
 };
-document.getElementById("prepopulate").onclick=function(){
+document.getElementById("prepopulate").onclick=function(event){
+    event.preventDefault();
     document.getElementById("name").value=localStorage.getItem("fullname");
-    
+    document.getElementById("phoneno").value=localStorage.getItem("phone number");
+    document.getElementById("place").value=localStorage.getItem("place name");
+    document.getElementById("companyname").value=localStorage.getItem("company name");
+    document.getElementById("pincode").value=localStorage.getItem("pin code");
+
 }
 
 // Create a form with a text field which when submitted, will change the tab title to whatever is entered, 
@@ -127,8 +132,6 @@ document.getElementById("tab-title-changing-form").onsubmit = function (event) {
        document.getElementById("title-error").innerHTML="the number of characters should be less than 50"
     }
 }
-
-
 
 
 // When control+enter key is pressed show an alert message. 
