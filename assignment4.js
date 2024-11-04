@@ -50,7 +50,6 @@ programs.forEach((value, index) => {
     const button = document.createElement('button');
     button.textContent = value;
     button.id = value;
-    button.style.backgroundColor = colors[index];
     button.style.margin = '5px';
     document.getElementById('button-container').appendChild(button);
     button.onclick = function () {
