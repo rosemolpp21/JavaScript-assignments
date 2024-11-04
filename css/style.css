@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#main-container {
+    background-color: red;
+    width: calc(100%-40px);
+    height: 100px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin:20px;
+    padding: 20px;
+}
+.align-button{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap:20px;
+}
+.select-box{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+#selection-box-msg-container{
+    background-color: rgb(219, 170, 170);
+    width: calc(100%-40px);
+    height: 100px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin:20px;
+    padding: 20px;
+}
+#button-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+#show-language{
+    background-color: rgb(219, 170, 170);
+    width: calc(100%-40px);
+    height: 100px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin:20px;
+    padding: 20px;
+}
+#form-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.tab-title-change{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
