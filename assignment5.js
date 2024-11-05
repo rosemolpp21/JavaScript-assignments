@@ -11,6 +11,7 @@ firstdiv.style.alignItems = "center";
 const firstbutton = document.createElement("button");
 firstbutton.id = 'first-button';
 firstbutton.textContent = "show details";
+firstbutton.style.margin="10px 0";
 const firstbreak = document.createElement("br");
 document.body.appendChild(firstdiv);
 document.body.appendChild(firstbutton);
@@ -42,6 +43,7 @@ fruits.forEach((value, index) => {
 const secondbutton = document.createElement("button");
 secondbutton.id = 'second-button';
 secondbutton.textContent = "toggle button";
+secondbutton.style.marginTop="20px";
 document.body.appendChild(secondbutton);
 let toggle = false;
 document.getElementById("second-button").onclick = function () {
