@@ -1,0 +1,27 @@
+.image-slide-container img {
+    width: 450px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 400px;
+}
+
+.image-slide-container {
+    width: calc(100%-40px);
+    position: relative;
+}
+
+.leftbutton {
+    position: absolute;
+    top: 575px;
+    z-index: 3;
+}
+
+.rightbutton {
+    position: absolute;
+    top: 575px;
+    left: 423px;
+    z-index: 3;
+}
