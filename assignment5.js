@@ -25,6 +25,10 @@ document.getElementById("first-button").onclick = function () {
 
 // Consider an array with name of 5 fruits, map this array and create five checkboxes with their corresponding names.
 // In a div show the fruit names which are checked.
+const fruitsdiv = document.createElement("div");
+fruitsdiv.id = "selectedFruits";
+fruitsdiv.style.backgroundColor="pink";
+document.body.appendChild(fruitsdiv);
 let fruits = ["apple", "mango", "grapes", "kiwi", "jackfruit"];
 fruits.forEach((value, index) => {
     const firstlabel = document.createElement("label");
@@ -32,11 +36,16 @@ fruits.forEach((value, index) => {
     const firstinput = document.createElement("input");
     firstinput.type = "checkbox";
     firstinput.id = value;
+    firstinput.addEventListener("change",showfruits)
     const firstbreak = document.createElement("br")
     document.body.appendChild(firstlabel);
     document.body.appendChild(firstinput);
     document.body.appendChild(firstbreak);
 })
+function showfruits(){
+        const checkedfruits = fruits.filter(fruit => document.getElementById(fruit).checked);
+        fruitsdiv.textContent=checkedfruits.join(" ");
+};
 
 
 // Create a toggle button, console the values as either true/ false when toggled.
@@ -65,13 +74,12 @@ const slideimg3 = document.getElementById("slide-img-3");
 const slideimg4 = document.getElementById("slide-img-4");
 const slideimg5 =document.getElementById("slide-img-5");
 const slideelements = [slideimg1, slideimg2, slideimg3, slideimg4,slideimg5];
-let index = 0;
 let slidevalue = 0;
 slideelements[slidevalue].style.zIndex = "1";
 document.getElementById("left-button").onclick = function () {
     slidevalue = slidevalue-1;
     if(slidevalue<0){
-        slidevalue=5-slidevalue;
+        slidevalue=4;
     }
     for (i = 0; i<5; i++) {
         if (i ==slidevalue) {
