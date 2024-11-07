@@ -67,20 +67,6 @@ x.forEach((value, index) => {
                             }, 1000);
                         }
                     }
-                    else if (k === 9) {
-                        output.textContent = `Draw`;
-                        setTimeout(restartgame, 3000);
-                        function restartgame() {
-                            let i = 6
-                            setInterval(() => {
-                                output.textContent = `next game will start in ${i} seconds`;
-                                i--;
-                                if (i < 0) {
-                                    window.location.reload();
-                                }
-                            }, 1000);
-                        }
-                    }
                 }
             }
         }
