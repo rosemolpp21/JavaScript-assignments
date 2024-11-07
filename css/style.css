@@ -10,7 +10,7 @@
 .gamekeys {
     width: 60px;
     height: 60px;
-    background-color: rgb(192, 170, 28);
+    background-color: rgb(217, 181, 109);
     border: 2px solid black;
     display: flex;
     align-items: center;
@@ -22,7 +22,7 @@
 .first-player-move {
     width: 60px;
     height: 60px;
-    background-color: rgb(192, 170, 28);
+    background-color: rgb(217, 181, 109);
     border: 2px solid black;
     display: flex;
     color: blueviolet;
@@ -37,7 +37,7 @@
 .second-player-move {
     width: 60px;
     height: 60px;
-    background-color: rgb(192, 170, 28);
+    background-color: rgb(217, 181, 109);
     color: red;
     border: 2px solid black;
     display: flex;
@@ -52,7 +52,7 @@
     margin: 0 auto;
     font-size: 30px;
     text-align: center;
-    color: rgb(86, 73, 7);
+    color: rgb(249, 249, 249);
     display: none;
     font-family: "poppins";
     font-weight: bolder;
@@ -91,4 +91,7 @@
     font-weight: bolder;
     background-image: url(../image/Screenshot\ 2024-11-07\ 152021.png);
     color: white;
+}
+body{
+    background-image: url(../image/old-wooden-texture-cover-from-planks-ui-game-background-seamless-pattern-in-cartoon-style-isolated-detailed-textured-material-illustration-vector.jpg);
 }
