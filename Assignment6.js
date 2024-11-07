@@ -5,6 +5,7 @@ const output = document.getElementById("output");
 const startbutton = document.getElementById("start-game");
 const mainimage = document.getElementById("main-image");
 const quitgame = document.getElementById("quit-button");
+let w=false;
 startbutton.onclick = function () {
     mainimage.style.display = "none";
     startbutton.id = "quit-button";
@@ -16,11 +17,10 @@ x.forEach((value, index) => {
     value.addEventListener("click", function gamefunction() {
         if (value.className == "gamekeys") {
             k = k + 1;
-            if (k % 2 === 0) {
+            if (k % 2 === 0&&w===false) {
                 output.textContent = `player 2 made a move , now it's player 1's turn`;
                 value.textContent = "x";
                 value.className = "second-player-move";
-                let m = 0;
                 let successchance = [[1, 2, 3], [3, 5, 7], [4, 5, 6], [7, 8, 9], [1, 4, 7], [2, 5, 8], [3, 6, 9], [1, 5, 9], [7, 8, 9]];
                 for (i of successchance) {
                     let firstvalue = document.getElementById(String(i[0]));
@@ -28,7 +28,7 @@ x.forEach((value, index) => {
                     let thirdvalue = document.getElementById(String(i[2]));
                     if (firstvalue.className == "second-player-move" && secondvalue.className == "second-player-move" && thirdvalue.className == "second-player-move") {
                         output.textContent = "Game over !!🏆🏆🏆 Firstplayer wins the game🏆🏆🏆";
-
+                        w=true;
                         setTimeout(restartgame, 3000);
                         function restartgame() {
                             let i = 6
@@ -43,11 +43,10 @@ x.forEach((value, index) => {
                     }
                 }
             }
-            else {
+            else if(k%2!=0 &&w===false) {
                 output.textContent = `player 1 made a move , now it's player 2's turn`;
                 value.textContent = "o";
                 value.className = "first-player-move";
-                let m = 0;
                 let successchance = [[1, 2, 3], [3, 5, 7], [4, 5, 6], [7, 8, 9], [1, 4, 7], [2, 5, 8], [3, 6, 9], [1, 5, 9], [7, 8, 9]];
                 for (i of successchance) {
                     let firstvalue = document.getElementById(String(i[0]));
@@ -55,6 +54,21 @@ x.forEach((value, index) => {
                     let thirdvalue = document.getElementById(String(i[2]));
                     if (firstvalue.className == "first-player-move" && secondvalue.className == "first-player-move" && thirdvalue.className == "first-player-move") {
                         output.textContent = "Game over !!🏆🏆🏆 Firstplayer wins the game🏆🏆🏆";
+                        w=true;
+                        setTimeout(restartgame, 3000);
+                        function restartgame() {
+                            let i = 6
+                            setInterval(() => {
+                                output.textContent = `next game will start in ${i} seconds`;
+                                i--;
+                                if (i < 0) {
+                                    window.location.reload();
+                                }
+                            }, 1000);
+                        }
+                    }
+                    else if (k === 9&&w===false) {
+                        output.textContent = `Draw`;
                         setTimeout(restartgame, 3000);
                         function restartgame() {
                             let i = 6
