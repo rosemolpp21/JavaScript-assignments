@@ -23,8 +23,6 @@ myrequest.onload = function () {
     });
     const extraaddeditem = document.createElement("div");
     totalItemList.appendChild(extraaddeditem);
-
-    // Write a function to retrieve and display the author and creation date from the nested metadata object in the JSON file.
     const authoranddate = document.createElement("div");
     const date = new Date(data.metadata.creationDate).toLocaleDateString(
         "en-us",
@@ -100,5 +98,12 @@ myrequest.onload = function () {
             document.getElementById("myform").reset();
         }
     });
+     // Write a function to retrieve and display the author and creation date from the nested metadata object in the JSON file.
+     function displayauthoranddate(){
+     const displayauthoranddate = document.createElement("div");
+     displayauthoranddate.innerHTML = `<h2>Author : ${data.metadata.author},  Date of Creation: ${date}<h2>`;
+     maindiv.appendChild(displayauthoranddate);
+    }
+    displayauthoranddate();
 };
 myrequest.send();
