@@ -35,7 +35,7 @@ myrequest.onload = function () {
 
 
 
-    
+
     // Write a JavaScript function to filter items in the array based on price (e.g., show only items over $500).
     const over500 = data.items.filter((k) => k.price > 500);
     const over500itemstext = document.createElement("div");
@@ -100,6 +100,5 @@ myrequest.onload = function () {
             document.getElementById("myform").reset();
         }
     });
-    // Write a function to retrieve and display the author and creation date from the nested metadata object in the JSON fil
 };
 myrequest.send();
