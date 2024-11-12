@@ -74,33 +74,33 @@ document.getElementById("form-details").onsubmit = function (event) {
     let errormsgarray = ["name-error", "phoneno-error", "place-error", "companyname-error", "pincode-error"];
     let arrayformelements = [formname, phonenumber, placename, nameofcompany, pinnumber];
     let arrayofnumberelements = [phonenumber, pinnumber];
-    let Valid = true;
+    let valid = true;
     errormsgarray.forEach(errorarryelement => document.getElementById(errorarryelement).innerHTML = "");
     arrayformelements.forEach((arrayelement, index) => {
         if (arrayelement == "") {
             document.getElementById(errormsgarray[index]).innerHTML = "error: this field is required";
-            Valid = false;
+            valid = false;
         }
     });
     if (!isNaN(phonenumber)) {
         if (phonenumber.length < 10) {
             document.getElementById("phoneno-error").innerHTML = "minimum length of phone number should be 10";
-            Valid = false;
+            valid = false;
         }
     } else {
         document.getElementById("phoneno-error").innerHTML = "error: only numbers are allowed";
-        Valid = false;
+        valid = false;
     }
     if (!isNaN(pinnumber)) {
         if (pinnumber.length < 6) {
             document.getElementById("pincode-error").innerHTML = "minimum length of pin code should be 6";
-            Valid = false;
+            valid = false;
         }
     } else {
         document.getElementById("pincode-error").innerHTML = "error: only numbers are allowed";
-        Valid = false;
+        valid = false;
     }
-    if (Valid) {
+    if (valid) {
         localStorage.setItem("fullname", formname);
         localStorage.setItem("phone number", phonenumber);
         localStorage.setItem("place name", placename);
