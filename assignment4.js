@@ -84,7 +84,7 @@ document.getElementById("form-details").onsubmit = function (event) {
     });
     if (!isNaN(phonenumber)) {
         if (phonenumber.length < 10) {
-            document.getElementById("phoneno-error").innerHTML = "Minimum length of phone number should be 10";
+            document.getElementById("phoneno-error").innerHTML = "minimum length of phone number should be 10";
             Valid = false;
         }
     } else {
@@ -93,7 +93,7 @@ document.getElementById("form-details").onsubmit = function (event) {
     }
     if (!isNaN(pinnumber)) {
         if (pinnumber.length < 6) {
-            document.getElementById("pincode-error").innerHTML = "Minimum length of Pin code should be 6";
+            document.getElementById("pincode-error").innerHTML = "minimum length of pin code should be 6";
             Valid = false;
         }
     } else {
