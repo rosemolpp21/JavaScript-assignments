@@ -23,7 +23,7 @@ myrequest.onload = function () {
     });
     const extraaddeditem = document.createElement("div");
     totalItemList.appendChild(extraaddeditem);
-    
+
     // Write a function to retrieve and display the author and creation date from the nested metadata object in the JSON file.
     const authoranddate = document.createElement("div");
     const date = new Date(data.metadata.creationDate).toLocaleDateString(
@@ -34,6 +34,8 @@ myrequest.onload = function () {
     totalItemList.appendChild(authoranddate);
 
 
+
+    
     // Write a JavaScript function to filter items in the array based on price (e.g., show only items over $500).
     const over500 = data.items.filter((k) => k.price > 500);
     const over500itemstext = document.createElement("div");
