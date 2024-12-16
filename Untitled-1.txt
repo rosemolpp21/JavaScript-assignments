@@ -1,0 +1,1 @@
+D:\sonar-scanner-cli-6.2.1.4610-windows-x64\sonar-scanner-6.2.1.4610-windows-x64\bin\sonar-scanner.bat -D"sonar.projectKey=JavaScript-assignment6" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.token=sqp_5186475aaf6d3940809c584ce6cdc2ef69b8fec2"

@@ -1,5 +1,4 @@
 #tictactoe-board {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 180px;
     height: 180px;
@@ -30,7 +29,8 @@
     justify-content: center;
     font-size: 50px;
     font-weight: bold;
-    font-family: "poppins";
+    font-family:"Poppins", sans-serif;
+
 
 }
 
@@ -45,7 +45,7 @@
     justify-content: center;
     font-size: 50px;
     font-weight: bolder;
-    font-family: "poppins";
+    font-family: "Poppins", sans-serif;
 }
 
 #output {
@@ -54,7 +54,7 @@
     text-align: center;
     color: rgb(249, 249, 249);
     display: none;
-    font-family: "poppins";
+    font-family: "Poppins", sans-serif;
     font-weight: bolder;
 
 }
@@ -76,7 +76,7 @@
     width: 100px;
     margin: 20px auto;
     text-align: center;
-    font-family: "poppins";
+    font-family: "Poppins", sans-serif;
     font-weight: bolder;
     background-image: url(../image/Screenshot\ 2024-11-07\ 152021.png);
     color: white;
@@ -87,7 +87,7 @@
     width: 100px;
     margin: 20px auto;
     text-align: center;
-    font-family: "poppins";
+    font-family: "Poppins", sans-serif;
     font-weight: bolder;
     background-image: url(../image/Screenshot\ 2024-11-07\ 152021.png);
     color: white;
